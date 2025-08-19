@@ -1,18 +1,17 @@
-from sklearn.preprocessing import RobustScaler
+import json
+import logging
+from typing import Dict, List, Literal, Optional, Set
+
+import numpy as np
+import optuna
 import polars as pl
 import umap.umap_ as umap
-import optuna
-import numpy as np
-import json
-from sklearn.preprocessing import StandardScaler
-from sklearn.manifold import trustworthiness
-from typing import Literal, List, Dict, Set, Optional
 from sklearn.cluster import DBSCAN
+from sklearn.manifold import TSNE, trustworthiness
 from sklearn.metrics import silhouette_score
 from sklearn.neighbors import NearestNeighbors
-from sklearn.manifold import TSNE
+from sklearn.preprocessing import RobustScaler, StandardScaler
 
-import logging
 
 optuna.logging.set_verbosity(optuna.logging.WARNING)
 
@@ -110,7 +109,7 @@ def run_umap(
 
     best_params: Dict[str, float] = study.best_params
     if save == True:
-        best_params_path = "../data/final/approach_4/best_umap_params.json"
+        best_params_path = "dataset/processed/approach_4/best_umap_params.json"
 
         with open(best_params_path, "w") as f:
             json.dump(best_params, f)
@@ -124,7 +123,9 @@ def run_umap(
         train_embedding, schema=[f"UMAP_{i}" for i in range(n_components)]
     )
 
-    train_final = pl.concat([data_ids, train_embedding_df, data_target], how="horizontal")
+    train_final = pl.concat(
+        [data_ids, train_embedding_df, data_target], how="horizontal"
+    )
 
     return train_final
 
@@ -151,7 +152,7 @@ def run_umap_test_set(
 
     X_data = data.drop([id_column, target_column])
 
-    best_params_path = "../data/final/approach_4/best_umap_params.json"
+    best_params_path = "dataset/processed/approach_4/best_umap_params.json"
 
     with open(best_params_path, "r") as f:
         best_params: Dict[str, float] = json.load(f)
@@ -159,7 +160,9 @@ def run_umap_test_set(
     best_params["n_components"] = n_components
 
     best_reducer = umap.UMAP(**best_params)
-    test_embedding = best_reducer.fit_transform(X_data.to_numpy())  # UMAP requires NumPy array
+    test_embedding = best_reducer.fit_transform(
+        X_data.to_numpy()
+    )  # UMAP requires NumPy array
 
     test_embedding_df = pl.DataFrame(
         test_embedding, schema=[f"UMAP_{i}" for i in range(n_components)]
@@ -201,7 +204,9 @@ def run_tsne(
 
     # Apply t-SNE for dimensionality reduction
     tsne_model = TSNE(n_components=n_components, random_state=42)
-    tsne_embedding = tsne_model.fit_transform(X_data.to_numpy())  # t-SNE requires a NumPy array
+    tsne_embedding = tsne_model.fit_transform(
+        X_data.to_numpy()
+    )  # t-SNE requires a NumPy array
 
     # Convert the result to a Polars DataFrame
     tsne_embedding_df = pl.DataFrame(

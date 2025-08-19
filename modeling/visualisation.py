@@ -1,10 +1,10 @@
-import polars as pl
-import numpy as np
-from typing import Literal, List, Dict, Set, Optional
-import plotly.graph_objects as go
-from plotly.subplots import make_subplots
-import plotly.express as px
+from typing import Dict, List, Literal, Optional, Set
 
+import numpy as np
+import plotly.express as px
+import plotly.graph_objects as go
+import polars as pl
+from plotly.subplots import make_subplots
 from scipy.stats import gaussian_kde
 
 
@@ -112,7 +112,9 @@ def plot_10_kde_plots(data: pl.DataFrame, target: str = "ER") -> None:
         row, col = (i // 5) + 1, (i % 5) + 1
 
         for j, cls in enumerate(unique_classes):
-            feature_values = data.filter(pl.col(binary_variable) == cls)[feature].to_list()
+            feature_values = data.filter(pl.col(binary_variable) == cls)[
+                feature
+            ].to_list()
 
             if len(feature_values) > 1:
                 kde = gaussian_kde(feature_values)
@@ -219,7 +221,11 @@ def plot_auc(
     # Add a diagonal reference line for a random classifier (baseline)
     fig.add_trace(
         go.Scatter(
-            x=[0, 1], y=[0, 1], mode="lines", name="Random", line=dict(dash="dash", color="red")
+            x=[0, 1],
+            y=[0, 1],
+            mode="lines",
+            name="Random",
+            line=dict(dash="dash", color="red"),
         )
     )
 

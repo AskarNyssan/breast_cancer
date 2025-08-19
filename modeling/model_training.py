@@ -23,8 +23,8 @@ def tune_and_evaluate_model(
     y_test: pd.Series,
     model_name: str,
     n_iter: int = 50,
-    log_dir: str = "../models/logs/approach_1",
-    model_dir: str = "../models/saved_models/approach_1",
+    log_dir: str = "models/logs/approach_1",
+    model_dir: str = "models/saved_models/approach_1",
     approach: str = "approach_1",
 ) -> Tuple[BaseEstimator, float, float, float]:
     """

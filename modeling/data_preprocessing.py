@@ -1,15 +1,12 @@
-import polars as pl
+from typing import Dict, List, Literal, Set
+
 import numpy as np
-from typing import Literal, List, Dict, Set
+import polars as pl
 from fancyimpute import IterativeImputer
 from joblib import Parallel, delayed
-from tqdm import tqdm
+from scipy.stats import ks_2samp, pointbiserialr
 from sklearn.ensemble import IsolationForest
-from scipy.stats import pointbiserialr
-import plotly.graph_objects as go
-from plotly.subplots import make_subplots
-from scipy.stats import gaussian_kde
-from scipy.stats import ks_2samp
+from tqdm import tqdm
 
 
 def convert_str_to_int(data: pl.DataFrame) -> pl.DataFrame:
@@ -23,7 +20,11 @@ def convert_str_to_int(data: pl.DataFrame) -> pl.DataFrame:
 
     data = data.with_columns(
         [
-            (data[col].cast(pl.Int64) if data[col].str.contains(r"^-?\d+$").all() else data[col])
+            (
+                data[col].cast(pl.Int64)
+                if data[col].str.contains(r"^-?\d+$").all()
+                else data[col]
+            )
             for col in data.columns
         ]
     )
@@ -57,15 +58,19 @@ def join_datasets(
 
 
 def create_new_col_names(
-    data: pl.DataFrame, keyword: str = "MRI", exclude_columns: List[str] = ["Patient ID"]
+    data: pl.DataFrame,
+    keyword: str = "MRI",
+    exclude_columns: List[str] = ["Patient ID"],
 ) -> pl.DataFrame:
     """
     Create a mapping of new column names for a Polars DataFrame by renaming
     non-excluded columns with a keyword and an index.
     Args:
         data (pl.DataFrame): The input DataFrame.
-        keyword (str, optional): The prefix to use for new column names. Defaults to "MRI".
-        exclude_columns (List[str], optional): List of column names to exclude. Defaults to ["Patient ID"].
+        keyword (str, optional): The prefix to use for new column names. Defaults to
+        "MRI".
+        exclude_columns (List[str], optional): List of column names to exclude. Defaults
+        to ["Patient ID"].
     Returns:
         pl.DataFrame: A DataFrame mapping original column names to new names.
     """
@@ -74,10 +79,13 @@ def create_new_col_names(
         for col, i in zip(
             data.drop(exclude_columns).columns,
             range(1, len(data.drop(exclude_columns).columns) + 1),
+            strict=False,
         )
     }
 
-    new_features_columns = pl.DataFrame(data=list(new_list.items()), schema=[f"{keyword}", "New"])
+    new_features_columns = pl.DataFrame(
+        data=list(new_list.items()), schema=[f"{keyword}", "New"]
+    )
 
     return new_features_columns
 
@@ -130,11 +138,15 @@ def percentage_of_null_values(data: pl.DataFrame) -> Dict[str, float]:
     null_share_dict: Dict[str, float] = {}
 
     for col in df_columns:
-        filtered_series = null_shares.select(col).filter(pl.col(col) > 0).to_series().to_list()
+        filtered_series = (
+            null_shares.select(col).filter(pl.col(col) > 0).to_series().to_list()
+        )
         if len(filtered_series) == 1:
             null_share_dict[col] = np.round(filtered_series[0], 2)
 
-    null_share_dict = dict(sorted(null_share_dict.items(), key=lambda item: item[1], reverse=True))
+    null_share_dict = dict(
+        sorted(null_share_dict.items(), key=lambda item: item[1], reverse=True)
+    )
     if len(null_share_dict) == 0:
         print("There are no missing values in the dataset")
     else:
@@ -153,12 +165,12 @@ def group_by_share_count(data: pl.DataFrame, group_by_col: str = "ER") -> pl.Dat
     """
     grouped_data = (
         data.group_by(group_by_col)
-        .agg(pl.len().alias(f"Count"))
+        .agg(pl.len().alias("Count"))
         .with_columns(
-            (pl.col(f"Count") / pl.col(f"Count").sum() * 100).round(2).alias(f"Percentage")
+            (pl.col("Count") / pl.col("Count").sum() * 100).round(2).alias("Percentage")
         )
-        .select([group_by_col, f"Count", f"Percentage"])
-        .sort(f"Percentage")
+        .select([group_by_col, "Count", "Percentage"])
+        .sort("Percentage")
     )
 
     return grouped_data
@@ -214,7 +226,9 @@ def find_optimal_max_iter_fancyimpute(
     return max_iters, imputed_results[-1]
 
 
-def percentage_of_outliers_iforest(data: pl.DataFrame, target: str = "ER") -> pl.DataFrame:
+def percentage_of_outliers_iforest(
+    data: pl.DataFrame, target: str = "ER"
+) -> pl.DataFrame:
     """
     Computes the percentage of outliers for each class in the target column using Isolation Forest.
     Args:
@@ -250,7 +264,9 @@ def percentage_of_outliers_iforest(data: pl.DataFrame, target: str = "ER") -> pl
 
 
 def high_correlation_columns(
-    data: pl.DataFrame, col_to_drop: List[str] = ["Patient ID", "ER"], threshold: float = 0.8
+    data: pl.DataFrame,
+    col_to_drop: List[str] = ["Patient ID", "ER"],
+    threshold: float = 0.8,
 ) -> Set[str]:
     """
     Identifies highly correlated columns in a Polars DataFrame.
@@ -402,7 +418,9 @@ def ks_test_feature_selection(
         else:
             dropped_features.append(col)
 
-    selected_features_df = pl.DataFrame(selected_features, schema=["feature", "p_value"])
+    selected_features_df = pl.DataFrame(
+        selected_features, schema=["feature", "p_value"]
+    )
 
     top_features = selected_features_df.sort("p_value", descending=False)
 

@@ -1,11 +1,18 @@
-import polars as pl
-import pandas as pd
-import xgboost as xgb
-from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, roc_auc_score
 import pickle
+from typing import Any, Dict, List
+
 import numpy as np
+import pandas as pd
+import polars as pl
+import xgboost as xgb
 from scipy.stats import chi2_contingency
-from typing import Dict, List, Any
+from sklearn.metrics import (
+    accuracy_score,
+    f1_score,
+    precision_score,
+    recall_score,
+    roc_auc_score,
+)
 
 
 def compute_metrics(df: pl.DataFrame) -> Dict[str, float]:
@@ -21,11 +28,15 @@ def compute_metrics(df: pl.DataFrame) -> Dict[str, float]:
     fp: int = df.filter((pl.col("ER") == 0) & (pl.col("ER_pred_label") == 1)).height
     fn: int = df.filter((pl.col("ER") == 1) & (pl.col("ER_pred_label") == 0)).height
 
-    accuracy: float = (tp + tn) / (tp + tn + fp + fn) if (tp + tn + fp + fn) > 0 else 0.0
+    accuracy: float = (
+        (tp + tn) / (tp + tn + fp + fn) if (tp + tn + fp + fn) > 0 else 0.0
+    )
     precision: float = tp / (tp + fp) if (tp + fp) > 0 else 0.0
     recall: float = tp / (tp + fn) if (tp + fn) > 0 else 0.0
     f1: float = (
-        (2 * precision * recall / (precision + recall)) if (precision + recall) > 0 else 0.0
+        (2 * precision * recall / (precision + recall))
+        if (precision + recall) > 0
+        else 0.0
     )
 
     # Compute AUC (Requires predicted probabilities)
@@ -45,7 +56,9 @@ def compute_metrics(df: pl.DataFrame) -> Dict[str, float]:
         "tn": float(tn),
         "fp": float(fp),
         "fn": float(fn),
-        "auc": auc if auc is not None else 0.0,  # Default to 0.0 if AUC cannot be computed
+        "auc": auc
+        if auc is not None
+        else 0.0,  # Default to 0.0 if AUC cannot be computed
     }
 
 
