@@ -1,0 +1,15 @@
+2025-08-19 19:06:29,980 - WARNING - /home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1509: UndefinedMetricWarning:
+
+Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+
+2025-08-19 19:06:29,981 - WARNING - /home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1509: UndefinedMetricWarning:
+
+Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+
+2025-08-19 19:06:29,982 - WARNING - /home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1509: UndefinedMetricWarning:
+
+Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+

@@ -1,0 +1,812 @@
+2025-08-19 19:06:01,750 - WARNING - /home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/sklearn/model_selection/_validation.py:547: FitFailedWarning:
+
+
+170 fits failed out of a total of 250.
+The score on these train-test partitions for these parameters will be set to nan.
+If these failures are not expected, you can try to debug them by setting error_score='raise'.
+
+Below are more details about the failures:
+--------------------------------------------------------------------------------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/sklearn/model_selection/_validation.py", line 895, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/sklearn.py", line 1599, in fit
+    self._Booster = train(
+                    ^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/training.py", line 181, in train
+    bst.update(dtrain, iteration=i, fobj=obj)
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 2100, in update
+    _check_call(
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 284, in _check_call
+    raise XGBoostError(py_str(_LIB.XGBGetLastError()))
+xgboost.core.XGBoostError: value 1.20112 for Parameter colsample_bytree exceed bound [0,1]
+colsample_bytree: Subsample ratio of columns, resample on each tree construction.
+
+--------------------------------------------------------------------------------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/sklearn/model_selection/_validation.py", line 895, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/sklearn.py", line 1599, in fit
+    self._Booster = train(
+                    ^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/training.py", line 181, in train
+    bst.update(dtrain, iteration=i, fobj=obj)
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 2100, in update
+    _check_call(
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 284, in _check_call
+    raise XGBoostError(py_str(_LIB.XGBGetLastError()))
+xgboost.core.XGBoostError: value 1.43244 for Parameter colsample_bytree exceed bound [0,1]
+colsample_bytree: Subsample ratio of columns, resample on each tree construction.
+
+--------------------------------------------------------------------------------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/sklearn/model_selection/_validation.py", line 895, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/sklearn.py", line 1599, in fit
+    self._Booster = train(
+                    ^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/training.py", line 181, in train
+    bst.update(dtrain, iteration=i, fobj=obj)
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 2100, in update
+    _check_call(
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 284, in _check_call
+    raise XGBoostError(py_str(_LIB.XGBGetLastError()))
+xgboost.core.XGBoostError: value 1.21165 for Parameter colsample_bytree exceed bound [0,1]
+colsample_bytree: Subsample ratio of columns, resample on each tree construction.
+
+--------------------------------------------------------------------------------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/sklearn/model_selection/_validation.py", line 895, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/sklearn.py", line 1599, in fit
+    self._Booster = train(
+                    ^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/training.py", line 181, in train
+    bst.update(dtrain, iteration=i, fobj=obj)
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 2100, in update
+    _check_call(
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 284, in _check_call
+    raise XGBoostError(py_str(_LIB.XGBGetLastError()))
+xgboost.core.XGBoostError: value 1.06676 for Parameter colsample_bytree exceed bound [0,1]
+colsample_bytree: Subsample ratio of columns, resample on each tree construction.
+
+--------------------------------------------------------------------------------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/sklearn/model_selection/_validation.py", line 895, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/sklearn.py", line 1599, in fit
+    self._Booster = train(
+                    ^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/training.py", line 181, in train
+    bst.update(dtrain, iteration=i, fobj=obj)
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 2100, in update
+    _check_call(
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 284, in _check_call
+    raise XGBoostError(py_str(_LIB.XGBGetLastError()))
+xgboost.core.XGBoostError: value 1.43319 for Parameter colsample_bytree exceed bound [0,1]
+colsample_bytree: Subsample ratio of columns, resample on each tree construction.
+
+--------------------------------------------------------------------------------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/sklearn/model_selection/_validation.py", line 895, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/sklearn.py", line 1599, in fit
+    self._Booster = train(
+                    ^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/training.py", line 181, in train
+    bst.update(dtrain, iteration=i, fobj=obj)
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 2100, in update
+    _check_call(
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 284, in _check_call
+    raise XGBoostError(py_str(_LIB.XGBGetLastError()))
+xgboost.core.XGBoostError: value 1.35536 for Parameter colsample_bytree exceed bound [0,1]
+colsample_bytree: Subsample ratio of columns, resample on each tree construction.
+
+--------------------------------------------------------------------------------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/sklearn/model_selection/_validation.py", line 895, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/sklearn.py", line 1599, in fit
+    self._Booster = train(
+                    ^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/training.py", line 181, in train
+    bst.update(dtrain, iteration=i, fobj=obj)
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 2100, in update
+    _check_call(
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 284, in _check_call
+    raise XGBoostError(py_str(_LIB.XGBGetLastError()))
+xgboost.core.XGBoostError: value 1.56958 for Parameter colsample_bytree exceed bound [0,1]
+colsample_bytree: Subsample ratio of columns, resample on each tree construction.
+
+--------------------------------------------------------------------------------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/sklearn/model_selection/_validation.py", line 895, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/sklearn.py", line 1599, in fit
+    self._Booster = train(
+                    ^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/training.py", line 181, in train
+    bst.update(dtrain, iteration=i, fobj=obj)
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 2100, in update
+    _check_call(
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 284, in _check_call
+    raise XGBoostError(py_str(_LIB.XGBGetLastError()))
+xgboost.core.XGBoostError: value 1.1979 for Parameter colsample_bytree exceed bound [0,1]
+colsample_bytree: Subsample ratio of columns, resample on each tree construction.
+
+--------------------------------------------------------------------------------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/sklearn/model_selection/_validation.py", line 895, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/sklearn.py", line 1599, in fit
+    self._Booster = train(
+                    ^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/training.py", line 181, in train
+    bst.update(dtrain, iteration=i, fobj=obj)
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 2100, in update
+    _check_call(
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 284, in _check_call
+    raise XGBoostError(py_str(_LIB.XGBGetLastError()))
+xgboost.core.XGBoostError: value 1.56117 for Parameter colsample_bytree exceed bound [0,1]
+colsample_bytree: Subsample ratio of columns, resample on each tree construction.
+
+--------------------------------------------------------------------------------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/sklearn/model_selection/_validation.py", line 895, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/sklearn.py", line 1599, in fit
+    self._Booster = train(
+                    ^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/training.py", line 181, in train
+    bst.update(dtrain, iteration=i, fobj=obj)
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 2100, in update
+    _check_call(
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 284, in _check_call
+    raise XGBoostError(py_str(_LIB.XGBGetLastError()))
+xgboost.core.XGBoostError: value 1.18675 for Parameter colsample_bytree exceed bound [0,1]
+colsample_bytree: Subsample ratio of columns, resample on each tree construction.
+
+--------------------------------------------------------------------------------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/sklearn/model_selection/_validation.py", line 895, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/sklearn.py", line 1599, in fit
+    self._Booster = train(
+                    ^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/training.py", line 181, in train
+    bst.update(dtrain, iteration=i, fobj=obj)
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 2100, in update
+    _check_call(
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 284, in _check_call
+    raise XGBoostError(py_str(_LIB.XGBGetLastError()))
+xgboost.core.XGBoostError: value 1.39018 for Parameter colsample_bytree exceed bound [0,1]
+colsample_bytree: Subsample ratio of columns, resample on each tree construction.
+
+--------------------------------------------------------------------------------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/sklearn/model_selection/_validation.py", line 895, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/sklearn.py", line 1599, in fit
+    self._Booster = train(
+                    ^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/training.py", line 181, in train
+    bst.update(dtrain, iteration=i, fobj=obj)
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 2100, in update
+    _check_call(
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 284, in _check_call
+    raise XGBoostError(py_str(_LIB.XGBGetLastError()))
+xgboost.core.XGBoostError: value 1.45004 for Parameter colsample_bytree exceed bound [0,1]
+colsample_bytree: Subsample ratio of columns, resample on each tree construction.
+
+--------------------------------------------------------------------------------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/sklearn/model_selection/_validation.py", line 895, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/sklearn.py", line 1599, in fit
+    self._Booster = train(
+                    ^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/training.py", line 181, in train
+    bst.update(dtrain, iteration=i, fobj=obj)
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 2100, in update
+    _check_call(
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 284, in _check_call
+    raise XGBoostError(py_str(_LIB.XGBGetLastError()))
+xgboost.core.XGBoostError: value 1.26884 for Parameter colsample_bytree exceed bound [0,1]
+colsample_bytree: Subsample ratio of columns, resample on each tree construction.
+
+--------------------------------------------------------------------------------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/sklearn/model_selection/_validation.py", line 895, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/sklearn.py", line 1599, in fit
+    self._Booster = train(
+                    ^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/training.py", line 181, in train
+    bst.update(dtrain, iteration=i, fobj=obj)
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 2100, in update
+    _check_call(
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 284, in _check_call
+    raise XGBoostError(py_str(_LIB.XGBGetLastError()))
+xgboost.core.XGBoostError: value 1.07221 for Parameter colsample_bytree exceed bound [0,1]
+colsample_bytree: Subsample ratio of columns, resample on each tree construction.
+
+--------------------------------------------------------------------------------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/sklearn/model_selection/_validation.py", line 895, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/sklearn.py", line 1599, in fit
+    self._Booster = train(
+                    ^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/training.py", line 181, in train
+    bst.update(dtrain, iteration=i, fobj=obj)
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 2100, in update
+    _check_call(
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 284, in _check_call
+    raise XGBoostError(py_str(_LIB.XGBGetLastError()))
+xgboost.core.XGBoostError: value 1.16128 for Parameter colsample_bytree exceed bound [0,1]
+colsample_bytree: Subsample ratio of columns, resample on each tree construction.
+
+--------------------------------------------------------------------------------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/sklearn/model_selection/_validation.py", line 895, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/sklearn.py", line 1599, in fit
+    self._Booster = train(
+                    ^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/training.py", line 181, in train
+    bst.update(dtrain, iteration=i, fobj=obj)
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 2100, in update
+    _check_call(
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 284, in _check_call
+    raise XGBoostError(py_str(_LIB.XGBGetLastError()))
+xgboost.core.XGBoostError: value 1.02754 for Parameter colsample_bytree exceed bound [0,1]
+colsample_bytree: Subsample ratio of columns, resample on each tree construction.
+
+--------------------------------------------------------------------------------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/sklearn/model_selection/_validation.py", line 895, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/sklearn.py", line 1599, in fit
+    self._Booster = train(
+                    ^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/training.py", line 181, in train
+    bst.update(dtrain, iteration=i, fobj=obj)
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 2100, in update
+    _check_call(
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 284, in _check_call
+    raise XGBoostError(py_str(_LIB.XGBGetLastError()))
+xgboost.core.XGBoostError: value 1.23641 for Parameter colsample_bytree exceed bound [0,1]
+colsample_bytree: Subsample ratio of columns, resample on each tree construction.
+
+--------------------------------------------------------------------------------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/sklearn/model_selection/_validation.py", line 895, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/sklearn.py", line 1599, in fit
+    self._Booster = train(
+                    ^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/training.py", line 181, in train
+    bst.update(dtrain, iteration=i, fobj=obj)
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 2100, in update
+    _check_call(
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 284, in _check_call
+    raise XGBoostError(py_str(_LIB.XGBGetLastError()))
+xgboost.core.XGBoostError: value 1.20442 for Parameter colsample_bytree exceed bound [0,1]
+colsample_bytree: Subsample ratio of columns, resample on each tree construction.
+
+--------------------------------------------------------------------------------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/sklearn/model_selection/_validation.py", line 895, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/sklearn.py", line 1599, in fit
+    self._Booster = train(
+                    ^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/training.py", line 181, in train
+    bst.update(dtrain, iteration=i, fobj=obj)
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 2100, in update
+    _check_call(
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 284, in _check_call
+    raise XGBoostError(py_str(_LIB.XGBGetLastError()))
+xgboost.core.XGBoostError: value 1.19887 for Parameter colsample_bytree exceed bound [0,1]
+colsample_bytree: Subsample ratio of columns, resample on each tree construction.
+
+--------------------------------------------------------------------------------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/sklearn/model_selection/_validation.py", line 895, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/sklearn.py", line 1599, in fit
+    self._Booster = train(
+                    ^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/training.py", line 181, in train
+    bst.update(dtrain, iteration=i, fobj=obj)
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 2100, in update
+    _check_call(
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 284, in _check_call
+    raise XGBoostError(py_str(_LIB.XGBGetLastError()))
+xgboost.core.XGBoostError: value 1.01651 for Parameter colsample_bytree exceed bound [0,1]
+colsample_bytree: Subsample ratio of columns, resample on each tree construction.
+
+--------------------------------------------------------------------------------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/sklearn/model_selection/_validation.py", line 895, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/sklearn.py", line 1599, in fit
+    self._Booster = train(
+                    ^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/training.py", line 181, in train
+    bst.update(dtrain, iteration=i, fobj=obj)
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 2100, in update
+    _check_call(
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 284, in _check_call
+    raise XGBoostError(py_str(_LIB.XGBGetLastError()))
+xgboost.core.XGBoostError: value 1.50683 for Parameter colsample_bytree exceed bound [0,1]
+colsample_bytree: Subsample ratio of columns, resample on each tree construction.
+
+--------------------------------------------------------------------------------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/sklearn/model_selection/_validation.py", line 895, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/sklearn.py", line 1599, in fit
+    self._Booster = train(
+                    ^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/training.py", line 181, in train
+    bst.update(dtrain, iteration=i, fobj=obj)
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 2100, in update
+    _check_call(
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 284, in _check_call
+    raise XGBoostError(py_str(_LIB.XGBGetLastError()))
+xgboost.core.XGBoostError: value 1.08483 for Parameter colsample_bytree exceed bound [0,1]
+colsample_bytree: Subsample ratio of columns, resample on each tree construction.
+
+--------------------------------------------------------------------------------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/sklearn/model_selection/_validation.py", line 895, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/sklearn.py", line 1599, in fit
+    self._Booster = train(
+                    ^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/training.py", line 181, in train
+    bst.update(dtrain, iteration=i, fobj=obj)
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 2100, in update
+    _check_call(
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 284, in _check_call
+    raise XGBoostError(py_str(_LIB.XGBGetLastError()))
+xgboost.core.XGBoostError: value 1.57178 for Parameter colsample_bytree exceed bound [0,1]
+colsample_bytree: Subsample ratio of columns, resample on each tree construction.
+
+--------------------------------------------------------------------------------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/sklearn/model_selection/_validation.py", line 895, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/sklearn.py", line 1599, in fit
+    self._Booster = train(
+                    ^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/training.py", line 181, in train
+    bst.update(dtrain, iteration=i, fobj=obj)
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 2100, in update
+    _check_call(
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 284, in _check_call
+    raise XGBoostError(py_str(_LIB.XGBGetLastError()))
+xgboost.core.XGBoostError: value 1.10268 for Parameter colsample_bytree exceed bound [0,1]
+colsample_bytree: Subsample ratio of columns, resample on each tree construction.
+
+--------------------------------------------------------------------------------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/sklearn/model_selection/_validation.py", line 895, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/sklearn.py", line 1599, in fit
+    self._Booster = train(
+                    ^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/training.py", line 181, in train
+    bst.update(dtrain, iteration=i, fobj=obj)
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 2100, in update
+    _check_call(
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 284, in _check_call
+    raise XGBoostError(py_str(_LIB.XGBGetLastError()))
+xgboost.core.XGBoostError: value 1.32822 for Parameter colsample_bytree exceed bound [0,1]
+colsample_bytree: Subsample ratio of columns, resample on each tree construction.
+
+--------------------------------------------------------------------------------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/sklearn/model_selection/_validation.py", line 895, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/sklearn.py", line 1599, in fit
+    self._Booster = train(
+                    ^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/training.py", line 181, in train
+    bst.update(dtrain, iteration=i, fobj=obj)
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 2100, in update
+    _check_call(
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 284, in _check_call
+    raise XGBoostError(py_str(_LIB.XGBGetLastError()))
+xgboost.core.XGBoostError: value 1.13577 for Parameter colsample_bytree exceed bound [0,1]
+colsample_bytree: Subsample ratio of columns, resample on each tree construction.
+
+--------------------------------------------------------------------------------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/sklearn/model_selection/_validation.py", line 895, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/sklearn.py", line 1599, in fit
+    self._Booster = train(
+                    ^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/training.py", line 181, in train
+    bst.update(dtrain, iteration=i, fobj=obj)
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 2100, in update
+    _check_call(
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 284, in _check_call
+    raise XGBoostError(py_str(_LIB.XGBGetLastError()))
+xgboost.core.XGBoostError: value 1.31115 for Parameter colsample_bytree exceed bound [0,1]
+colsample_bytree: Subsample ratio of columns, resample on each tree construction.
+
+--------------------------------------------------------------------------------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/sklearn/model_selection/_validation.py", line 895, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/sklearn.py", line 1599, in fit
+    self._Booster = train(
+                    ^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/training.py", line 181, in train
+    bst.update(dtrain, iteration=i, fobj=obj)
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 2100, in update
+    _check_call(
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 284, in _check_call
+    raise XGBoostError(py_str(_LIB.XGBGetLastError()))
+xgboost.core.XGBoostError: value 1.54052 for Parameter colsample_bytree exceed bound [0,1]
+colsample_bytree: Subsample ratio of columns, resample on each tree construction.
+
+--------------------------------------------------------------------------------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/sklearn/model_selection/_validation.py", line 895, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/sklearn.py", line 1599, in fit
+    self._Booster = train(
+                    ^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/training.py", line 181, in train
+    bst.update(dtrain, iteration=i, fobj=obj)
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 2100, in update
+    _check_call(
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 284, in _check_call
+    raise XGBoostError(py_str(_LIB.XGBGetLastError()))
+xgboost.core.XGBoostError: value 1.27569 for Parameter colsample_bytree exceed bound [0,1]
+colsample_bytree: Subsample ratio of columns, resample on each tree construction.
+
+--------------------------------------------------------------------------------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/sklearn/model_selection/_validation.py", line 895, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/sklearn.py", line 1599, in fit
+    self._Booster = train(
+                    ^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/training.py", line 181, in train
+    bst.update(dtrain, iteration=i, fobj=obj)
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 2100, in update
+    _check_call(
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 284, in _check_call
+    raise XGBoostError(py_str(_LIB.XGBGetLastError()))
+xgboost.core.XGBoostError: value 1.29578 for Parameter colsample_bytree exceed bound [0,1]
+colsample_bytree: Subsample ratio of columns, resample on each tree construction.
+
+--------------------------------------------------------------------------------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/sklearn/model_selection/_validation.py", line 895, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/sklearn.py", line 1599, in fit
+    self._Booster = train(
+                    ^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/training.py", line 181, in train
+    bst.update(dtrain, iteration=i, fobj=obj)
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 2100, in update
+    _check_call(
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 284, in _check_call
+    raise XGBoostError(py_str(_LIB.XGBGetLastError()))
+xgboost.core.XGBoostError: value 1.59625 for Parameter colsample_bytree exceed bound [0,1]
+colsample_bytree: Subsample ratio of columns, resample on each tree construction.
+
+--------------------------------------------------------------------------------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/sklearn/model_selection/_validation.py", line 895, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/sklearn.py", line 1599, in fit
+    self._Booster = train(
+                    ^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/training.py", line 181, in train
+    bst.update(dtrain, iteration=i, fobj=obj)
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 2100, in update
+    _check_call(
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 284, in _check_call
+    raise XGBoostError(py_str(_LIB.XGBGetLastError()))
+xgboost.core.XGBoostError: value 1.45632 for Parameter colsample_bytree exceed bound [0,1]
+colsample_bytree: Subsample ratio of columns, resample on each tree construction.
+
+--------------------------------------------------------------------------------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/sklearn/model_selection/_validation.py", line 895, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/sklearn.py", line 1599, in fit
+    self._Booster = train(
+                    ^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/training.py", line 181, in train
+    bst.update(dtrain, iteration=i, fobj=obj)
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 2100, in update
+    _check_call(
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 284, in _check_call
+    raise XGBoostError(py_str(_LIB.XGBGetLastError()))
+xgboost.core.XGBoostError: value 1.53563 for Parameter colsample_bytree exceed bound [0,1]
+colsample_bytree: Subsample ratio of columns, resample on each tree construction.
+
+--------------------------------------------------------------------------------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/sklearn/model_selection/_validation.py", line 895, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/sklearn.py", line 1599, in fit
+    self._Booster = train(
+                    ^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/training.py", line 181, in train
+    bst.update(dtrain, iteration=i, fobj=obj)
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 2100, in update
+    _check_call(
+  File "/home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py", line 284, in _check_call
+    raise XGBoostError(py_str(_LIB.XGBGetLastError()))
+xgboost.core.XGBoostError: value 1.54013 for Parameter colsample_bytree exceed bound [0,1]
+colsample_bytree: Subsample ratio of columns, resample on each tree construction.
+
+
+
+2025-08-19 19:06:01,754 - WARNING - /home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/sklearn/model_selection/_search.py:1051: UserWarning:
+
+One or more of the test scores are non-finite: [0.61170951 0.63013424        nan        nan        nan 0.65361562
+ 0.61453677        nan 0.59402656 0.63380758        nan        nan
+        nan        nan        nan        nan 0.66939763 0.6384599
+        nan        nan        nan        nan        nan        nan
+        nan        nan        nan 0.64105216        nan        nan
+ 0.64029819        nan 0.6382199         nan 0.62211534        nan
+ 0.63056179 0.65135927        nan        nan 0.65091701        nan
+        nan        nan        nan        nan 0.63642956        nan
+        nan        nan]
+
+
+2025-08-19 19:06:01,880 - WARNING - /home/askar/Desktop/Projects/breast_cancer/.venv/lib/python3.11/site-packages/xgboost/core.py:158: UserWarning:
+
+[19:06:01] WARNING: /workspace/src/learner.cc:740: 
+Parameters: { "use_label_encoder" } are not used.
+
+
+
