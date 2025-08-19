@@ -17,7 +17,6 @@ __pycache__/
 *.so
 
 # Distribution / packaging
-logs/
 .venv
 .Python
 env/
@@ -101,3 +100,6 @@ sql_files
 
 # config file
 /conf/config.yaml
+
+# saved models
+**.pkl
