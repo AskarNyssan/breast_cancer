@@ -4,23 +4,27 @@
             "path": "." // Represents the root folder where the .code-workspace file is located
         }
     ],
-    "settings": {
-        // General editor settings
-        "editor.formatOnSave": true, // Automatically format code on each save
-
-        // Python-specific settings
-        "python.defaultInterpreterPath": ".venv/bin/python", // Points to the project's virtual environment
-        "python.testing.pytestEnabled": true, // Enables Pytest for test discovery
-        "python.testing.pytestArgs": [ "tests" ], // Specifies the directory for tests
-
-        // Language-specific editor settings for Python
-        "[python]": {
-            "editor.codeActionsOnSave": {
-                "source.organizeImports": "explicit" // Automatically organize imports on save
-            },
-            "editor.defaultFormatter": "charliermarsh.ruff" // Sets Ruff as the default formatter
+   
+    "[python]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.codeActionsOnSave": {
+            "source.fixAll.ruff": "always"
         }
     },
+    
+  "python.formatting.provider": "none",
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "source.organizeImports": "explicit",
+    "source.fixAll.ruff": "always"
+},
+   "ruff.enable": true,
+  "ruff.organizeImports": true,
+  "ruff.fixAll": true,
+  "ruff.lineLength": 88,
+
+  
     "extensions": {
         "recommendations": [
             // Essential Python tooling

@@ -158,13 +158,26 @@ select = [
     "B",  # flake8-bugbear
     "C",  # flake8-comprehensions
     "N",  # pep8-naming
+    "I", "F401"
 ]
+
 ignore = [
     "E203",  # Whitespace before ':' (conflicts with Black-style formatting)
 ]
 target-version = "py311"
 include = ["*.py"]
 exclude = [".git", ".hg", ".mypy_cache", ".tox", ".venv", "_build", "buck-out", "build", "dist"]
+
+[tool.ruff.isort]
+known-first-party = ["modeling"]
+lines-after-imports = 2
+
+[tool.ruff.lint]
+ignore = ["B006"]
+select = ["E501"]
+
+[tool.ruff.format]
+docstring-code-line-length = 88
 
 [tool.vscode]
 editor.formatOnSave = true
