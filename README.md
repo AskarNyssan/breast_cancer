@@ -162,12 +162,12 @@ breast_cancer/
 ├── .gitignore              # Git ignore file
 ├── .python-version         # Specified Python version
 ├── .vscode/                # VS Code settings
-├── LICENSE                 # Project license (MIT assumed; check file for details)
+├── LICENSE                 # Project license 
 ├── README.md               
 ├── dataset/                # Data files
 │   ├── intermediate/       # Intermediate processing files
 │   ├── processed/          # Processed train/test sets
-│   └── raw/                # Raw Excel datasets
+│   └── raw/                # Raw datasets
 ├── modeling/               # Core Python modules
 │   ├── __init__.py
 │   ├── data_preprocessing.py
