@@ -95,9 +95,6 @@ docs/
 *.sql
 sql_files
 
-# Ignore All (xlsx) files
-*.xlsx
-
 # config file
 /conf/config.yaml
 
